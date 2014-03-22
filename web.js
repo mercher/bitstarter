@@ -3,7 +3,8 @@ var app = express();
 app.use(express.logger());
 
 var text_buffer = new Buffer(128);
-text_buffer = fs.readFileSync('index.html');
+//text_buffer = fs.readFileSync('index.html');
+text_buffer.write("Hello ...");
 var text_string = text_buffer.toString();
 
 app.get('/', function(request, response) {
