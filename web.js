@@ -8,7 +8,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
   //response.send(text_string);
-  response.send("test")
+  response.send("test");
 });
 
 var port = process.env.PORT || 5000;
