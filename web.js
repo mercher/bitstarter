@@ -3,7 +3,11 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  text_buffer = fs.readFileSync('index.html')
+  text_buffer = fs.readFileSync('index.html', function (err, data) {
+    if (err) throw err;
+    console.log(data);
+  });
+  
   text_string = text_buffer.toString();
   response.send(text_string);
 }
