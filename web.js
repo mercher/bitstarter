@@ -4,11 +4,10 @@ app.use(express.logger());
 
 //text_buffer = fs.readFile('index.html');
 //text_string = text_buffer.toString();
-
+text_string = "test2";
 
 app.get('/', function(request, response) {
-  //response.send(text_string);
-  response.send("test");
+  response.send(text_string);
 });
 
 var port = process.env.PORT || 5000;
